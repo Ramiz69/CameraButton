@@ -5,20 +5,19 @@
 [![License](https://img.shields.io/cocoapods/l/CameraButton.svg?style=flat)](https://cocoapods.org/pods/CameraButton)
 [![Platform](https://img.shields.io/cocoapods/p/CameraButton.svg?style=flat)](https://cocoapods.org/pods/CameraButton)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-CameraButton is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'CameraButton'
-```
+# Preview
+![Button preview](https://github.com/ramiz69/CameraButton/blob/master/example.gif?raw=true)
+# Installation
+## Manually
+copy CameraButton.swift to your project
+# Usage
+## code
+- init CameraButton with frame
+- add a button to your view
+## storyboard
+- add a button to your view
+- in the "Identity Inspector" in xCode, change the class to "CameraButton"
+- add constraint for the placement of the button
 
 ## Author
 
