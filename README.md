@@ -29,7 +29,7 @@ pod 'RKCameraButton'
 ```
 
 ### Manually
-copy CameraButton.swift to your project
+copy `CameraButton.swift` to your project
 
 ### Usage
 
