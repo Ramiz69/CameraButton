@@ -2,8 +2,8 @@
 
 [![Build Status](https://github.com/Ramiz69/CameraButton/workflows/Camera%20Button%20CI/badge.svg?branch=master)](https://github.com/Ramiz69/CameraButton/actions)
 [![Version](https://img.shields.io/cocoapods/v/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
-[![License](https://img.shields.io/cocoapods/l/CameraButton.svg?style=flat)](https://cocoapods.org/pods/CameraButton)
-[![Platform](https://img.shields.io/cocoapods/p/CameraButton.svg?style=flat)](https://cocoapods.org/pods/CameraButton)
+[![License](https://img.shields.io/cocoapods/l/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
+[![Platform](https://img.shields.io/cocoapods/p/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
 
 - [Installation](#installation)
 - [Author](#author)
