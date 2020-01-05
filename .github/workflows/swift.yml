@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1            
       - name: iOS - ${{ matrix.destination }}
-        run: xcodebuild -project "CameraButton.xcodeproj" -scheme "CameraButton" -destination "${{ matrix.destination }}"
+        run: xcodebuild -project "CameraButton.xcodeproj" -destination "${{ matrix.destination }}"
