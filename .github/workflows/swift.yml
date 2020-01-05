@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1            
       - name: iOS - ${{ matrix.destination }}
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "CameraButton.xcodeproj" -scheme "CameraButton" -destination "${{ matrix.destination }}" clean test | xcpretty
+        run: xcodebuild -project "CameraButton.xcodeproj" -scheme "CameraButton" -destination "${{ matrix.destination }}"
