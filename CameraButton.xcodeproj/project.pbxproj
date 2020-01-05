@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2EB69423C1C8E000FB91AD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4B2EB69223C1C8E000FB91AD /* LICENSE */; };
+		4B2EB69523C1C8E000FB91AD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4B2EB69323C1C8E000FB91AD /* README.md */; };
 		4BE099B6233D331200AE7670 /* CameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE099B4233D331200AE7670 /* CameraButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BE099BD233D332900AE7670 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099BC233D332900AE7670 /* CameraButton.swift */; };
 		4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C4233D339B00AE7670 /* AppDelegate.swift */; };
@@ -17,8 +19,6 @@
 		4BE099D1233D339D00AE7670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099CF233D339D00AE7670 /* LaunchScreen.storyboard */; };
 		4BE099D7233D36C400AE7670 /* CameraButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE099B1233D331200AE7670 /* CameraButton.framework */; };
 		4BE099D8233D36C400AE7670 /* CameraButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE099B1233D331200AE7670 /* CameraButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4BE099DE233D43ED00AE7670 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099DC233D43ED00AE7670 /* README.md */; };
-		4BE099DF233D43ED00AE7670 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099DD233D43ED00AE7670 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B2EB69223C1C8E000FB91AD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4B2EB69323C1C8E000FB91AD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		4BE099B1233D331200AE7670 /* CameraButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE099B4233D331200AE7670 /* CameraButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraButton.h; sourceTree = "<group>"; };
 		4BE099B5233D331200AE7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +60,6 @@
 		4BE099CD233D339D00AE7670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE099D0233D339D00AE7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BE099D2233D339D00AE7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BE099DC233D43ED00AE7670 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4BE099DD233D43ED00AE7670 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 		4BE099B3233D331200AE7670 /* CameraButton */ = {
 			isa = PBXGroup;
 			children = (
-				4BE099DD233D43ED00AE7670 /* LICENSE */,
-				4BE099DC233D43ED00AE7670 /* README.md */,
+				4B2EB69223C1C8E000FB91AD /* LICENSE */,
+				4B2EB69323C1C8E000FB91AD /* README.md */,
 				4BE099BC233D332900AE7670 /* CameraButton.swift */,
 				4BE099B4233D331200AE7670 /* CameraButton.h */,
 				4BE099B5233D331200AE7670 /* Info.plist */,
@@ -227,8 +227,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE099DF233D43ED00AE7670 /* LICENSE in Resources */,
-				4BE099DE233D43ED00AE7670 /* README.md in Resources */,
+				4B2EB69523C1C8E000FB91AD /* README.md in Resources */,
+				4B2EB69423C1C8E000FB91AD /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

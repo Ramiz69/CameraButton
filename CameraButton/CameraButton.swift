@@ -1,7 +1,7 @@
 //
 //  CameraButton.swift
 //
-//  Copyright (c) 2019 Ramiz Kichibekov (https://www.instagram.com/ramiz69/)
+//  Copyright (c) 2019 Ramiz Kichibekov (https://t.me/Ramiz69)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -244,8 +244,8 @@ open class CameraButton: UIButton {
             
             return UIBezierPath(roundedRect: rect, cornerRadius: rect.width / 2)
         case .video:
-            let rect = CGRect(x: innerSquare + innerLargeCircleOffset,
-                              y: innerSquare + innerLargeCircleOffset,
+            let rect = CGRect(x: innerCirclePath().currentPoint.x / 2,
+                              y: innerCirclePath().currentPoint.x / 2,
                               width: frame.width / 2,
                               height: frame.height / 2)
             
