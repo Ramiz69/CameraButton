@@ -16,7 +16,7 @@
 - Swift 5+
 
 ## Preview
-![Button preview](https://github.com/ramiz69/CameraButton/blob/master/example.gif?raw=true)
+<img src="https://github.com/ramiz69/CameraButton/blob/master/example.gif" width="200" height="400">
 
 ## Installation
 
