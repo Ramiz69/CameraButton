@@ -1,7 +1,7 @@
 //
 //  CameraButton.swift
 //
-//  Copyright (c) 2019 Ramiz Kichibekov (https://t.me/Ramiz69)
+//  Copyright (c) 2020 Ramiz Kichibekov (https://www.instagram.com/kichibekov69)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,35 +24,24 @@
 
 import UIKit
 
-public enum CameraButtonType {
-    case photo
-    case video
-    
-    public var color: CGColor {
-        switch self {
-        case .photo: return UIColor(white: 1, alpha: 0.24).cgColor
-        case .video: return UIColor.red.cgColor
-        }
-    }
-    
-    public init(withValue value: Int) {
-        switch value {
-        case 0: self = .photo
-        case 1: self = .video
-        default: self = .photo
-        }
-    }
-    
-    public var index: Int {
-        switch self {
-        case .photo: return 0
-        case .video: return 1
-        }
-    }
-}
-
 @IBDesignable
 open class CameraButton: UIButton {
+    
+    // MARK: - Colors
+    
+    @IBInspectable
+    public var photoColor: UIColor = .clear {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable
+    public var videoColor: UIColor = .clear {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     // MARK: - Ring
     
@@ -128,10 +117,11 @@ open class CameraButton: UIButton {
     
     // MARK: - Public properties
     
-    public var type: CameraButtonType = .photo {
+    public var type: CameraType = .photo {
         didSet {
             pathLayer.removeAllAnimations()
-            pathLayer.fillColor = type.color
+            pathLayer.fillColor = configureColor().cgColor
+            isSelected = false
         }
     }
     
@@ -191,6 +181,7 @@ open class CameraButton: UIButton {
         outerRing.lineWidth = ringLineWidth
         ringColor.setStroke()
         outerRing.stroke()
+        pathLayer.fillColor = configureColor().cgColor
     }
     
     // MARK: - Custom methos
@@ -201,7 +192,6 @@ open class CameraButton: UIButton {
         pathLayer.removeFromSuperlayer()
         pathLayer.path = currentInnerPath().cgPath
         pathLayer.strokeColor = nil
-        pathLayer.fillColor = type.color
         layer.addSublayer(pathLayer)
     }
     
@@ -215,14 +205,7 @@ open class CameraButton: UIButton {
     }
     
     private func currentInnerPath() -> UIBezierPath {
-        var returnPath: UIBezierPath
-        if isSelected {
-            returnPath = innerSquarePath()
-        } else {
-            returnPath = innerCirclePath()
-        }
-        
-        return returnPath
+        return isSelected ? innerSquarePath() : innerCirclePath()
     }
     
     private func innerCirclePath() -> UIBezierPath {
@@ -253,17 +236,24 @@ open class CameraButton: UIButton {
         }
     }
     
+    private func configureColor() -> UIColor {
+        switch type {
+        case .photo: return photoColor == .clear ? type.color : photoColor
+        case .video: return videoColor == .clear ? type.color : videoColor
+        }
+    }
+    
     // MARK: - Actions
     
     @objc private func touchCancel(_ sender: UIButton) {
         isSelected = !isSelected
-        colorChangeAnimator.toValue = type.color
+        colorChangeAnimator.toValue = configureColor().cgColor
         pathLayer.add(colorChangeAnimator, forKey: "darkColor")
     }
     
     @objc private func touchDown(_ sender: UIButton) {
         colorChangeAnimator.duration = animateDuration
-        colorChangeAnimator.toValue = type == .photo ? UIColor.white.cgColor : type.color
+        colorChangeAnimator.toValue = type == .photo && photoColor == .clear ? UIColor.white.cgColor : configureColor().cgColor
         
         colorChangeAnimator.fillMode = .forwards
         colorChangeAnimator.isRemovedOnCompletion = false
@@ -277,7 +267,7 @@ open class CameraButton: UIButton {
     
     @objc private func touchUpInside(_ sender: UIButton) {
         colorChangeAnimator.duration = animateDuration
-        colorChangeAnimator.toValue = type.color
+        colorChangeAnimator.toValue = configureColor().cgColor
         
         colorChangeAnimator.fillMode = .forwards
         colorChangeAnimator.isRemovedOnCompletion = false
