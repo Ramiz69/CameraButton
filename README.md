@@ -11,14 +11,32 @@
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 11.3+
+- iOS 15.0+
+- Xcode 16.0+
 - Swift 5+
 
 ## Preview
 <img src="https://github.com/Ramiz69/CameraButton/blob/master/example.gif" width="200" height="400">
 
 ## Installation
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding Slider as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift` or the Package list in Xcode.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/Ramiz69/CameraButton.git", .upToNextMajor(from: "0.0.4"))
+]
+```
+
+Normally you'll want to depend on the `CameraButton` target:
+
+```swift
+.product(name: "CameraButton", package: "CameraButton")
+```
 
 ### CocoaPods
 
@@ -34,7 +52,7 @@ copy `CameraButton.swift` to your project
 ### Usage
 
 #### code
-- init CameraButton with frame
+- init CameraButton with frame or use Auto Layout
 - add a button to your view
 
 #### storyboard

@@ -24,42 +24,36 @@
 
 import UIKit
 
-@IBDesignable
 open class CameraButton: UIButton {
     
-    // MARK: - Colors
-    
-    @IBInspectable
+    // MARK: Colors
+
     public var photoColor: UIColor = .clear {
         didSet {
             setNeedsDisplay()
         }
     }
-    
-    @IBInspectable
+
     public var videoColor: UIColor = .clear {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    // MARK: - Ring
-    
-    @IBInspectable
+    // MARK: Ring
+
     public var ringOffset: CGFloat = 3 {
         didSet {
             setNeedsDisplay()
         }
     }
-    
-    @IBInspectable
+
     public var ringLineWidth: CGFloat = 4 {
         didSet {
             setNeedsDisplay()
         }
     }
-    
-    @IBInspectable
+
     public var ringColor: UIColor = .white {
         didSet {
             setNeedsDisplay()
@@ -67,41 +61,36 @@ open class CameraButton: UIButton {
     }
     
     // MARK: Inner large circle
-    
-    @IBInspectable
+
     public var innerLargeCircleOffset: CGFloat = 8 {
         didSet {
             configureLayer()
         }
     }
     
-    // MARK: - Inner small circle
-    
-    @IBInspectable
+    // MARK: Inner small circle
+
     public var innerSmallCircleOffset: CGFloat = 13 {
         didSet {
             configureLayer()
         }
     }
     
-    // MARK: - Inner square
-    
-    @IBInspectable
+    // MARK: Inner square
+
     public var innerSquare: CGFloat = 17 {
         didSet {
             configureLayer()
         }
     }
-    
-    @IBInspectable
+
     public var squareCornerRadius: CGFloat = 8 {
         didSet {
             configureLayer()
         }
     }
     
-    // MARK: - Properties
-    // MARK: - Open properties
+    // MARK: Properties
     
     override open var isSelected: Bool {
         didSet {
@@ -115,7 +104,7 @@ open class CameraButton: UIButton {
         }
     }
     
-    // MARK: - Public properties
+    // MARK: Public properties
     
     public var type: CameraType = .photo {
         didSet {
@@ -124,15 +113,16 @@ open class CameraButton: UIButton {
             isSelected = false
         }
     }
-    
-    // MARK: - Private properties
+    public weak var delegate: CameraButtonDelegate?
+
+    // MARK: Private properties
     
     private let pathLayer = CAShapeLayer()
-    private let animateDuration = 0.3
+    private let animateDuration = CATransaction.animationDuration()
     private let colorChangeAnimator = CABasicAnimation(keyPath: "fillColor")
     
-    // MARK: - UIButton life cycle
-    
+    // MARK: Life cycle
+
     public init() {
         super.init(frame: .zero)
         
@@ -154,20 +144,24 @@ open class CameraButton: UIButton {
     override open func awakeFromNib() {
         super.awakeFromNib()
         
-        addConstraint(NSLayoutConstraint(item: self,
-                                         attribute: .width,
-                                         relatedBy: .equal,
-                                         toItem: nil,
-                                         attribute: .width,
-                                         multiplier: 1,
-                                         constant: frame.width))
-        addConstraint(NSLayoutConstraint(item: self,
-                                         attribute: .height,
-                                         relatedBy: .equal,
-                                         toItem: nil,
-                                         attribute: .width,
-                                         multiplier: 1,
-                                         constant: frame.height))
+        Task {
+            await MainActor.run {
+                addConstraint(NSLayoutConstraint(item: self,
+                                                 attribute: .width,
+                                                 relatedBy: .equal,
+                                                 toItem: nil,
+                                                 attribute: .width,
+                                                 multiplier: 1,
+                                                 constant: frame.width))
+                addConstraint(NSLayoutConstraint(item: self,
+                                                 attribute: .height,
+                                                 relatedBy: .equal,
+                                                 toItem: nil,
+                                                 attribute: .width,
+                                                 multiplier: 1,
+                                                 constant: frame.height))
+            }
+        }
     }
     
     override open func draw(_ rect: CGRect) {
@@ -183,9 +177,8 @@ open class CameraButton: UIButton {
         outerRing.stroke()
         pathLayer.fillColor = configureColor().cgColor
     }
-    
-    // MARK: - Custom methos
-    // MARK: - Private methods
+
+    // MARK: Private methods
     
     private func configureLayer() {
         pathLayer.removeAllAnimations()
@@ -199,13 +192,45 @@ open class CameraButton: UIButton {
         configureLayer()
         setTitle("", for: .normal)
         tintColor = .clear
-        addTarget(self, action: #selector(touchUpInside(_:)), for: .touchUpInside)
-        addTarget(self, action: #selector(touchDown(_:)), for: .touchDown)
-        addTarget(self, action: #selector(touchCancel(_:)), for: .touchDragExit)
+        let touchUpInsideAction = UIAction { [unowned self] _ in
+            self.colorChangeAnimator.duration = animateDuration
+            self.colorChangeAnimator.toValue = configureColor().cgColor
+
+            self.colorChangeAnimator.fillMode = .forwards
+            self.colorChangeAnimator.isRemovedOnCompletion = false
+
+            self.colorChangeAnimator.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            self.pathLayer.add(colorChangeAnimator, forKey: "darkColor")
+            self.isSelected = !self.isSelected
+            self.delegate?.didTapButton(self)
+        }
+        addAction(touchUpInsideAction, for: .touchUpInside)
+        let touchDownAction = UIAction { [unowned self] _ in
+            self.colorChangeAnimator.duration = animateDuration
+            self.colorChangeAnimator.toValue = type == .photo && photoColor == .clear ? UIColor.white.cgColor : configureColor().cgColor
+
+            self.colorChangeAnimator.fillMode = .forwards
+            self.colorChangeAnimator.isRemovedOnCompletion = false
+
+            self.colorChangeAnimator.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            self.pathLayer.add(colorChangeAnimator, forKey: "darkColor")
+            if self.type == .photo {
+                self.isSelected = !isSelected
+            }
+            self.delegate?.didTapDownButton(self)
+        }
+        addAction(touchDownAction, for: .touchDown)
+        let touchCancelAction = UIAction { [unowned self] _ in
+            self.isSelected = !self.isSelected
+            self.colorChangeAnimator.toValue = self.configureColor().cgColor
+            self.pathLayer.add(colorChangeAnimator, forKey: "darkColor")
+            self.delegate?.didTapCancelButton(self)
+        }
+        addAction(touchCancelAction, for: .touchCancel)
     }
     
     private func currentInnerPath() -> UIBezierPath {
-        return isSelected ? innerSquarePath() : innerCirclePath()
+        isSelected ? innerSquarePath() : innerCirclePath()
     }
     
     private func innerCirclePath() -> UIBezierPath {
@@ -238,43 +263,9 @@ open class CameraButton: UIButton {
     
     private func configureColor() -> UIColor {
         switch type {
-        case .photo: return photoColor == .clear ? type.color : photoColor
-        case .video: return videoColor == .clear ? type.color : videoColor
+        case .photo: photoColor == .clear ? type.color : photoColor
+        case .video: videoColor == .clear ? type.color : videoColor
         }
-    }
-    
-    // MARK: - Actions
-    
-    @objc private func touchCancel(_ sender: UIButton) {
-        isSelected = !isSelected
-        colorChangeAnimator.toValue = configureColor().cgColor
-        pathLayer.add(colorChangeAnimator, forKey: "darkColor")
-    }
-    
-    @objc private func touchDown(_ sender: UIButton) {
-        colorChangeAnimator.duration = animateDuration
-        colorChangeAnimator.toValue = type == .photo && photoColor == .clear ? UIColor.white.cgColor : configureColor().cgColor
-        
-        colorChangeAnimator.fillMode = .forwards
-        colorChangeAnimator.isRemovedOnCompletion = false
-        
-        colorChangeAnimator.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        pathLayer.add(colorChangeAnimator, forKey: "darkColor")
-        if type == .photo {
-            isSelected = !isSelected
-        }
-    }
-    
-    @objc private func touchUpInside(_ sender: UIButton) {
-        colorChangeAnimator.duration = animateDuration
-        colorChangeAnimator.toValue = configureColor().cgColor
-        
-        colorChangeAnimator.fillMode = .forwards
-        colorChangeAnimator.isRemovedOnCompletion = false
-        
-        colorChangeAnimator.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        pathLayer.add(colorChangeAnimator, forKey: "darkColor")
-        isSelected = !isSelected
     }
     
 }

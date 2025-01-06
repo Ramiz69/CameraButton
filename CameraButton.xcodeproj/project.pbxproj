@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B2EB69423C1C8E000FB91AD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4B2EB69223C1C8E000FB91AD /* LICENSE */; };
-		4B2EB69523C1C8E000FB91AD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4B2EB69323C1C8E000FB91AD /* README.md */; };
-		4BC6F2E6257F986300691CE9 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6F2E5257F986300691CE9 /* CameraType.swift */; };
+		4B8D4C8A2D2BFD0200751CC3 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D4C852D2BFD0200751CC3 /* CameraButton.swift */; };
+		4B8D4C8B2D2BFD0200751CC3 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D4C862D2BFD0200751CC3 /* CameraType.swift */; };
+		4B8D4C8C2D2BFD0200751CC3 /* CameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8D4C842D2BFD0200751CC3 /* CameraButton.h */; };
+		4BA40D722D2C005D007466AD /* CameraButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */; };
 		4BC6F2EF257F9D3000691CE9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */; };
-		4BE099B6233D331200AE7670 /* CameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE099B4233D331200AE7670 /* CameraButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BE099BD233D332900AE7670 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099BC233D332900AE7670 /* CameraButton.swift */; };
 		4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C4233D339B00AE7670 /* AppDelegate.swift */; };
 		4BE099C7233D339B00AE7670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C6233D339B00AE7670 /* SceneDelegate.swift */; };
 		4BE099C9233D339B00AE7670 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C8233D339B00AE7670 /* BasicViewController.swift */; };
@@ -48,14 +47,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4B2EB69223C1C8E000FB91AD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		4B2EB69323C1C8E000FB91AD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		4BC6F2E5257F986300691CE9 /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
+		4B8D4C842D2BFD0200751CC3 /* CameraButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraButton.h; sourceTree = "<group>"; };
+		4B8D4C852D2BFD0200751CC3 /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		4B8D4C862D2BFD0200751CC3 /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
+		4B8D4C872D2BFD0200751CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonDelegate.swift; sourceTree = "<group>"; };
 		4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		4BE099B1233D331200AE7670 /* CameraButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BE099B4233D331200AE7670 /* CameraButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraButton.h; sourceTree = "<group>"; };
-		4BE099B5233D331200AE7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BE099BC233D332900AE7670 /* CameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		4BE099C2233D339B00AE7670 /* CameraButton-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CameraButton-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE099C4233D339B00AE7670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE099C6233D339B00AE7670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +83,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B8D4C882D2BFD0200751CC3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4BA40D702D2C0050007466AD /* Protocols */,
+				4B8D4C842D2BFD0200751CC3 /* CameraButton.h */,
+				4B8D4C852D2BFD0200751CC3 /* CameraButton.swift */,
+				4B8D4C862D2BFD0200751CC3 /* CameraType.swift */,
+				4B8D4C872D2BFD0200751CC3 /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		4BA40D702D2C0050007466AD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4BE099A7233D331200AE7670 = {
 			isa = PBXGroup;
 			children = (
-				4BE099B3233D331200AE7670 /* CameraButton */,
+				4B8D4C882D2BFD0200751CC3 /* Sources */,
 				4BE099C3233D339B00AE7670 /* CameraButton-Example */,
 				4BE099B2233D331200AE7670 /* Products */,
 				4BE099D6233D36C400AE7670 /* Frameworks */,
@@ -102,19 +120,6 @@
 				4BE099C2233D339B00AE7670 /* CameraButton-Example.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		4BE099B3233D331200AE7670 /* CameraButton */ = {
-			isa = PBXGroup;
-			children = (
-				4B2EB69223C1C8E000FB91AD /* LICENSE */,
-				4B2EB69323C1C8E000FB91AD /* README.md */,
-				4BC6F2E5257F986300691CE9 /* CameraType.swift */,
-				4BE099BC233D332900AE7670 /* CameraButton.swift */,
-				4BE099B4233D331200AE7670 /* CameraButton.h */,
-				4BE099B5233D331200AE7670 /* Info.plist */,
-			);
-			path = CameraButton;
 			sourceTree = "<group>";
 		};
 		4BE099C3233D339B00AE7670 /* CameraButton-Example */ = {
@@ -146,7 +151,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE099B6233D331200AE7670 /* CameraButton.h in Headers */,
+				4B8D4C8C2D2BFD0200751CC3 /* CameraButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +201,9 @@
 		4BE099A8233D331200AE7670 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = "Ramiz Kichibekov";
 				TargetAttributes = {
 					4BE099B0233D331200AE7670 = {
@@ -210,7 +216,6 @@
 				};
 			};
 			buildConfigurationList = 4BE099AB233D331200AE7670 /* Build configuration list for PBXProject "CameraButton" */;
-			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -218,6 +223,8 @@
 				Base,
 			);
 			mainGroup = 4BE099A7233D331200AE7670;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 4BE099B2233D331200AE7670 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,8 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B2EB69523C1C8E000FB91AD /* README.md in Resources */,
-				4B2EB69423C1C8E000FB91AD /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC6F2E6257F986300691CE9 /* CameraType.swift in Sources */,
-				4BE099BD233D332900AE7670 /* CameraButton.swift in Sources */,
+				4B8D4C8A2D2BFD0200751CC3 /* CameraButton.swift in Sources */,
+				4BA40D722D2C005D007466AD /* CameraButtonDelegate.swift in Sources */,
+				4B8D4C8B2D2BFD0200751CC3 /* CameraType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -327,6 +334,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -338,6 +346,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -359,6 +368,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -368,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -390,6 +401,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -401,6 +413,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -415,6 +428,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -426,25 +440,32 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CameraButton/Info.plist;
+				ENABLE_MODULE_VERIFIER = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramizkichibekov.CameraButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -454,24 +475,31 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CameraButton/Info.plist;
+				ENABLE_MODULE_VERIFIER = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramizkichibekov.CameraButton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,13 +511,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8AD8N54BY6;
 				INFOPLIST_FILE = "CameraButton-Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramizkichibekov.CameraButton-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -501,13 +534,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8AD8N54BY6;
 				INFOPLIST_FILE = "CameraButton-Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ramizkichibekov.CameraButton-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

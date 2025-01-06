@@ -11,7 +11,7 @@ import CameraButton
 
 final class CustomViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: Properties
     
     private lazy var cameraButton: CameraButton = {
         let frame = CGRect(x: .zero, y: .zero, width: 60, height: 60)
@@ -23,18 +23,18 @@ final class CustomViewController: UIViewController {
         return button
     }()
     
-    // MARK: - Life cycle
+    // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(cameraButton)
     }
+
+    // MARK: Actions
     
-    // MARK: - Custom methods
-    // MARK: - Actions
-    
-    @IBAction private func didChangeSegment(_ sender: UISegmentedControl) {
+    @IBAction
+    private func didChangeSegment(_ sender: UISegmentedControl) {
         cameraButton.type = CameraType(withValue: sender.selectedSegmentIndex)
     }
     

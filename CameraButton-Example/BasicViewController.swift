@@ -11,14 +11,14 @@ import CameraButton
 
 final class BasicViewController: UIViewController {
     
-    // MARK: - Outlets
+    // MARK: Outlets
     
-    @IBOutlet weak private var cameraButton: CameraButton!
+    @IBOutlet private var cameraButton: CameraButton!
+
+    // MARK: Actions
     
-    // MARK: - Custom methods
-    // MARK: - Actions
-    
-    @IBAction private func didChangeSegment(_ sender: UISegmentedControl) {
+    @IBAction
+    private func didChangeSegment(_ sender: UISegmentedControl) {
         cameraButton.type = CameraType(withValue: sender.selectedSegmentIndex)
     }
     

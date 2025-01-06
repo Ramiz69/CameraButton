@@ -37,7 +37,7 @@ public enum CameraType {
     
     public init(withValue value: Int) {
         switch value {
-        case 0: self = .photo
+        case .zero: self = .photo
         case 1: self = .video
         default: self = .photo
         }
@@ -45,8 +45,8 @@ public enum CameraType {
     
     public var index: Int {
         switch self {
-        case .photo: return 0
-        case .video: return 1
+        case .photo: .zero
+        case .video: 1
         }
     }
 }
