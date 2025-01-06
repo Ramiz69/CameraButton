@@ -13,7 +13,7 @@ This CocoaPods library helps you create application with the best button.
   spec.license      = 'MIT'
 
   spec.author             = { 'Ramiz Kichibekov' => 'ramiz161@icloud.com' }
-  spec.social_media_url   = 'https://instagram.com/kichibekov69'
+  spec.social_media_url   = 'https://t.me/Ramiz69'
 
   spec.ios.deployment_target = "15.0"
 
@@ -21,6 +21,6 @@ This CocoaPods library helps you create application with the best button.
 
   spec.swift_version = ['6.0']
   
-  spec.source_files  = 'CameraButton/*.swift'
+  spec.source_files  = 'Sources/*.swift', 'Sources/**/*.swift'
 
 end
