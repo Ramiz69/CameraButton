@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
 [![License](https://img.shields.io/cocoapods/l/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
 [![Platform](https://img.shields.io/cocoapods/p/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
+[![Swift](https://img.shields.io/badge/swift-5.9-orange.svg)](https://swift.org)
 
 - [Installation](#installation)
 - [Author](#author)
