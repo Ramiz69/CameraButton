@@ -12,14 +12,6 @@
 		4B8D4C8C2D2BFD0200751CC3 /* CameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8D4C842D2BFD0200751CC3 /* CameraButton.h */; };
 		4BA40D722D2C005D007466AD /* CameraButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */; };
 		4BF1A0032E9A000000C0FFEE /* CameraShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1A0022E9A000000C0FFEE /* CameraShutterButton.swift */; };
-		4BF1A0052E9A000000C0FFEE /* GlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */; };
-		4BC6F2EF257F9D3000691CE9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */; };
-		4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C4233D339B00AE7670 /* AppDelegate.swift */; };
-		4BE099C7233D339B00AE7670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C6233D339B00AE7670 /* SceneDelegate.swift */; };
-		4BE099C9233D339B00AE7670 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C8233D339B00AE7670 /* BasicViewController.swift */; };
-		4BE099CC233D339B00AE7670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099CA233D339B00AE7670 /* Main.storyboard */; };
-		4BE099CE233D339D00AE7670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099CD233D339D00AE7670 /* Assets.xcassets */; };
-		4BE099D1233D339D00AE7670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE099CF233D339D00AE7670 /* LaunchScreen.storyboard */; };
 		4BE099D7233D36C400AE7670 /* CameraButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE099B1233D331200AE7670 /* CameraButton.framework */; };
 		4BE099D8233D36C400AE7670 /* CameraButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE099B1233D331200AE7670 /* CameraButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -55,18 +47,17 @@
 		4B8D4C872D2BFD0200751CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonDelegate.swift; sourceTree = "<group>"; };
 		4BF1A0022E9A000000C0FFEE /* CameraShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraShutterButton.swift; sourceTree = "<group>"; };
-		4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassViewController.swift; sourceTree = "<group>"; };
-		4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		4BE099B1233D331200AE7670 /* CameraButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE099C2233D339B00AE7670 /* CameraButton-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CameraButton-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BE099C4233D339B00AE7670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BE099C6233D339B00AE7670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BE099C8233D339B00AE7670 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
-		4BE099CB233D339B00AE7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4BE099CD233D339D00AE7670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4BE099D0233D339D00AE7670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4BE099D2233D339D00AE7670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4BE099C3233D339B00AE7670 /* CameraButton-Example */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "CameraButton-Example";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4BE099AE233D331200AE7670 /* Frameworks */ = {
@@ -135,22 +126,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4BE099C3233D339B00AE7670 /* CameraButton-Example */ = {
-			isa = PBXGroup;
-			children = (
-				4BE099C4233D339B00AE7670 /* AppDelegate.swift */,
-				4BE099C6233D339B00AE7670 /* SceneDelegate.swift */,
-				4BE099C8233D339B00AE7670 /* BasicViewController.swift */,
-				4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */,
-				4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */,
-				4BE099CA233D339B00AE7670 /* Main.storyboard */,
-				4BE099CD233D339D00AE7670 /* Assets.xcassets */,
-				4BE099CF233D339D00AE7670 /* LaunchScreen.storyboard */,
-				4BE099D2233D339D00AE7670 /* Info.plist */,
-			);
-			path = "CameraButton-Example";
-			sourceTree = "<group>";
-		};
 		4BE099D6233D36C400AE7670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +178,9 @@
 			);
 			dependencies = (
 				4BE099DA233D36C400AE7670 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4BE099C3233D339B00AE7670 /* CameraButton-Example */,
 			);
 			name = "CameraButton-Example";
 			productName = "CameraButton-Example";
@@ -261,9 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE099D1233D339D00AE7670 /* LaunchScreen.storyboard in Resources */,
-				4BE099CE233D339D00AE7670 /* Assets.xcassets in Resources */,
-				4BE099CC233D339B00AE7670 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE099C9233D339B00AE7670 /* BasicViewController.swift in Sources */,
-				4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */,
-				4BE099C7233D339B00AE7670 /* SceneDelegate.swift in Sources */,
-				4BC6F2EF257F9D3000691CE9 /* CustomViewController.swift in Sources */,
-				4BF1A0052E9A000000C0FFEE /* GlassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,25 +272,6 @@
 			targetProxy = 4BE099D9233D36C400AE7670 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4BE099CA233D339B00AE7670 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BE099CB233D339B00AE7670 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4BE099CF233D339D00AE7670 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BE099D0233D339D00AE7670 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4BE099B7233D331200AE7670 /* Debug */ = {
@@ -525,9 +476,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8AD8N54BY6;
-				INFOPLIST_FILE = "CameraButton-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraButton;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera preview shows how CameraButton looks over a live scene. Nothing is saved or uploaded.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,9 +508,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8AD8N54BY6;
-				INFOPLIST_FILE = "CameraButton-Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraButton;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera preview shows how CameraButton looks over a live scene. Nothing is saved or uploaded.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

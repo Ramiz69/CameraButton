@@ -17,7 +17,7 @@
 - Swift 6.0+
 
 ## Preview
-<img src="https://github.com/Ramiz69/CameraButton/blob/master/example.gif" width="200" height="400">
+<img src="example.gif" width="240" alt="CameraButton example app: photo capture, then video recording with a progress ring">
 
 ## Installation
 
@@ -94,6 +94,15 @@ The ring resets when recording stops.
 | `isHapticFeedbackEnabled` | Haptics on capture and record toggle |
 
 The button supports VoiceOver labels, Dynamic colors and Reduce Motion out of the box.
+
+## Example app
+
+Open `CameraButton.xcodeproj` and run the `CameraButton-Example` scheme (iOS 18+). It is a SwiftUI camera screen with:
+
+- a live camera preview on device and an animated scene in the Simulator;
+- photo and video modes with a recording timer and a 15 s limit;
+- a Playground sheet that edits every button property live and shows the matching Swift code;
+- a SwiftUI / UIKit switch that renders the same button through `CameraShutterButton` or through `CameraButton` with a delegate.
 
 ## Author
 
