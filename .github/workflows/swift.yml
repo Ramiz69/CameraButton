@@ -1,20 +1,18 @@
 name: "Camera Button CI"
 
-on: 
+on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
   iOS:
-    name: Test iOS 
-    runs-on: macOS-latest
-    env: 
-      DEVELOPER_DIR: /Applications/Xcode_11.3.app/Contents/Developer
-    strategy:
-      matrix:
-        destination: ["OS=13.1,name=iPhone 11 Pro"] #, "OS=12.4,name=iPhone XS", "OS=11.4,name=iPhone X", "OS=10.3.1,name=iPhone SE"]
+    name: Build iOS
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v1            
-      - name: iOS - ${{ matrix.destination }}
-        run: xcodebuild -project "CameraButton.xcodeproj" -destination "${{ matrix.destination }}"
+      - uses: actions/checkout@v4
+      - name: Build library
+        run: xcodebuild build -scheme CameraButton -destination 'generic/platform=iOS Simulator'
+      - name: Build example
+        run: xcodebuild build -project CameraButton.xcodeproj -scheme CameraButton-Example -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO

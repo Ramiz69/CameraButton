@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
 
   spec.name         = 'RKCameraButton'
-  spec.version      = '0.0.4'
-  spec.summary      = 'A CocoaPods library written in Swift'
+  spec.version      = '1.0.0'
+  spec.summary      = 'Camera shutter button for UIKit and SwiftUI with Liquid Glass support'
 
   spec.description  = <<-DESC
 This CocoaPods library helps you create application with the best button.

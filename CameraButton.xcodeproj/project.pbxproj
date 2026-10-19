@@ -11,6 +11,8 @@
 		4B8D4C8B2D2BFD0200751CC3 /* CameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8D4C862D2BFD0200751CC3 /* CameraType.swift */; };
 		4B8D4C8C2D2BFD0200751CC3 /* CameraButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8D4C842D2BFD0200751CC3 /* CameraButton.h */; };
 		4BA40D722D2C005D007466AD /* CameraButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */; };
+		4BF1A0032E9A000000C0FFEE /* CameraShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1A0022E9A000000C0FFEE /* CameraShutterButton.swift */; };
+		4BF1A0052E9A000000C0FFEE /* GlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */; };
 		4BC6F2EF257F9D3000691CE9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */; };
 		4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C4233D339B00AE7670 /* AppDelegate.swift */; };
 		4BE099C7233D339B00AE7670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE099C6233D339B00AE7670 /* SceneDelegate.swift */; };
@@ -52,6 +54,8 @@
 		4B8D4C862D2BFD0200751CC3 /* CameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraType.swift; sourceTree = "<group>"; };
 		4B8D4C872D2BFD0200751CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonDelegate.swift; sourceTree = "<group>"; };
+		4BF1A0022E9A000000C0FFEE /* CameraShutterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraShutterButton.swift; sourceTree = "<group>"; };
+		4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassViewController.swift; sourceTree = "<group>"; };
 		4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		4BE099B1233D331200AE7670 /* CameraButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE099C2233D339B00AE7670 /* CameraButton-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CameraButton-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				4BA40D702D2C0050007466AD /* Protocols */,
+				4BF1A0012E9A000000C0FFEE /* SwiftUI */,
 				4B8D4C842D2BFD0200751CC3 /* CameraButton.h */,
 				4B8D4C852D2BFD0200751CC3 /* CameraButton.swift */,
 				4B8D4C862D2BFD0200751CC3 /* CameraType.swift */,
@@ -101,6 +106,14 @@
 				4BA40D712D2C0057007466AD /* CameraButtonDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4BF1A0012E9A000000C0FFEE /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4BF1A0022E9A000000C0FFEE /* CameraShutterButton.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		4BE099A7233D331200AE7670 = {
@@ -129,6 +142,7 @@
 				4BE099C6233D339B00AE7670 /* SceneDelegate.swift */,
 				4BE099C8233D339B00AE7670 /* BasicViewController.swift */,
 				4BC6F2EE257F9D3000691CE9 /* CustomViewController.swift */,
+				4BF1A0042E9A000000C0FFEE /* GlassViewController.swift */,
 				4BE099CA233D339B00AE7670 /* Main.storyboard */,
 				4BE099CD233D339D00AE7670 /* Assets.xcassets */,
 				4BE099CF233D339D00AE7670 /* LaunchScreen.storyboard */,
@@ -262,6 +276,7 @@
 			files = (
 				4B8D4C8A2D2BFD0200751CC3 /* CameraButton.swift in Sources */,
 				4BA40D722D2C005D007466AD /* CameraButtonDelegate.swift in Sources */,
+				4BF1A0032E9A000000C0FFEE /* CameraShutterButton.swift in Sources */,
 				4B8D4C8B2D2BFD0200751CC3 /* CameraType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +289,7 @@
 				4BE099C5233D339B00AE7670 /* AppDelegate.swift in Sources */,
 				4BE099C7233D339B00AE7670 /* SceneDelegate.swift in Sources */,
 				4BC6F2EF257F9D3000691CE9 /* CustomViewController.swift in Sources */,
+				4BF1A0052E9A000000C0FFEE /* GlassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
