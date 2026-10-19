@@ -1,9 +1,9 @@
 # CameraButton
 
 [![Build Status](https://github.com/Ramiz69/CameraButton/workflows/Camera%20Button%20CI/badge.svg?branch=master)](https://github.com/Ramiz69/CameraButton/actions)
-[![Version](https://img.shields.io/cocoapods/v/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
-[![License](https://img.shields.io/cocoapods/l/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
-[![Platform](https://img.shields.io/cocoapods/p/RKCameraButton.svg?style=flat)](https://cocoapods.org/pods/RKCameraButton)
+[![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Ramiz69/CameraButton/blob/master/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-iOS%2015%2B-lightgrey.svg?style=flat)](https://developer.apple.com/ios/)
 [![Swift](https://img.shields.io/badge/swift-6.0-orange.svg)](https://swift.org)
 
 - [Installation](#installation)
@@ -41,14 +41,10 @@ Normally you'll want to depend on the `CameraButton` target:
 
 ### CocoaPods
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate CameraButton into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-pod 'RKCameraButton'
-```
+CocoaPods is no longer supported starting with 1.0.0. The last published pod is `RKCameraButton 0.0.4`. Please migrate to Swift Package Manager.
 
 ### Manually
-copy `CameraButton.swift` to your project
+Copy the contents of the `Sources` folder into your project.
 
 ### Usage
 
