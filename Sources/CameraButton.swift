@@ -47,6 +47,8 @@ open class CameraButton: UIButton {
     /// Tint of the Liquid Glass disc. Applies to the `glass` style only.
     public var glassTintColor: UIColor? {
         didSet {
+            guard oldValue != glassTintColor else { return }
+            
             updateStyle()
         }
     }
@@ -58,12 +60,16 @@ open class CameraButton: UIButton {
 
     public var photoColor: UIColor = .clear {
         didSet {
+            guard oldValue != photoColor else { return }
+            
             updateFillColor(configureColor(), animated: false)
         }
     }
 
     public var videoColor: UIColor = .clear {
         didSet {
+            guard oldValue != videoColor else { return }
+            
             updateFillColor(configureColor(), animated: false)
         }
     }
@@ -72,18 +78,24 @@ open class CameraButton: UIButton {
 
     public var ringOffset: CGFloat = 3 {
         didSet {
+            guard oldValue != ringOffset else { return }
+            
             updateRing()
         }
     }
 
     public var ringLineWidth: CGFloat = 4 {
         didSet {
+            guard oldValue != ringLineWidth else { return }
+            
             updateRing()
         }
     }
 
     public var ringColor: UIColor = .white {
         didSet {
+            guard oldValue != ringColor else { return }
+            
             setNeedsDisplay()
         }
     }
@@ -92,6 +104,8 @@ open class CameraButton: UIButton {
     
     public var progressColor: UIColor = .systemRed {
         didSet {
+            guard oldValue != progressColor else { return }
+            
             updateProgressColor()
         }
     }
@@ -111,6 +125,8 @@ open class CameraButton: UIButton {
 
     public var innerLargeCircleOffset: CGFloat = 8 {
         didSet {
+            guard oldValue != innerLargeCircleOffset else { return }
+            
             updateInnerPath(animated: false)
         }
     }
@@ -119,6 +135,8 @@ open class CameraButton: UIButton {
 
     public var innerSmallCircleOffset: CGFloat = 13 {
         didSet {
+            guard oldValue != innerSmallCircleOffset else { return }
+            
             updateInnerPath(animated: false)
         }
     }
@@ -127,12 +145,16 @@ open class CameraButton: UIButton {
 
     public var innerSquare: CGFloat = 17 {
         didSet {
+            guard oldValue != innerSquare else { return }
+            
             updateInnerPath(animated: false)
         }
     }
 
     public var squareCornerRadius: CGFloat = 8 {
         didSet {
+            guard oldValue != squareCornerRadius else { return }
+            
             updateInnerPath(animated: false)
         }
     }

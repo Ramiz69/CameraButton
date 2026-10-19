@@ -15,6 +15,16 @@ import SwiftUI
 /// }
 /// .frame(width: 72, height: 72)
 /// ```
+///
+/// Use `configure` to set any other `CameraButton` property:
+///
+/// ```swift
+/// CameraShutterButton(type: .photo) {
+///     camera.capture()
+/// } configure: { button in
+///     button.ringColor = .systemYellow
+/// }
+/// ```
 public struct CameraShutterButton: UIViewRepresentable {
 
     // MARK: Properties
@@ -23,6 +33,7 @@ public struct CameraShutterButton: UIViewRepresentable {
     private let style: CameraButton.Style
     private let recordingProgress: CGFloat
     private let action: () -> Void
+    private let configure: (CameraButton) -> Void
     @Binding private var isRecording: Bool
 
     // MARK: Life cycle
@@ -31,12 +42,14 @@ public struct CameraShutterButton: UIViewRepresentable {
                 style: CameraButton.Style = .classic,
                 isRecording: Binding<Bool> = .constant(false),
                 recordingProgress: CGFloat = 0,
-                action: @escaping () -> Void = {}) {
+                action: @escaping () -> Void = {},
+                configure: @escaping (CameraButton) -> Void = { _ in }) {
         self.type = type
         self.style = style
         self._isRecording = isRecording
         self.recordingProgress = recordingProgress
         self.action = action
+        self.configure = configure
     }
 
     // MARK: UIViewRepresentable
@@ -52,6 +65,7 @@ public struct CameraShutterButton: UIViewRepresentable {
 
     public func updateUIView(_ button: CameraButton, context: Context) {
         context.coordinator.parent = self
+        configure(button)
         button.style = style
         if button.type != type {
             button.type = type
